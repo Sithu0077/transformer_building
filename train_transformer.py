@@ -20,16 +20,16 @@ class Config:
     data_path   = "input.txt"       # your Shakespeare file
 
     # Model size — small enough to train on CPU in minutes
-    d_model     = 64                # each token = 64 numbers
+    d_model     = 32                # each token = 64 numbers
     num_heads   = 4                 # 4 attention heads
     d_ff        = 256               # feed forward inner size (4 × d_model)
-    num_layers  = 4                 # number of transformer blocks
+    num_layers  = 2                 # number of transformer blocks
     max_len     = 128               # max sequence length
     dropout     = 0.1               # regularization
 
     # Training
-    batch_size  = 16                # sentences per training step
-    num_steps   = 5000              # total training steps
+    batch_size  = 8                # sentences per training step
+    num_steps   = 2000            # total training steps
     lr          = 3e-4              # learning rate
     eval_every  = 500               # print loss every N steps
     eval_steps  = 50                # steps to average for eval loss
